@@ -1,0 +1,21 @@
+yolo_model:
+
+  config_file:
+    name: yolov4_custom.cfg
+  weight_file:
+    name: yolov4_custom.weights
+  threshold:
+    value: 0.3
+  detection_classes:
+    names:
+      - stillage
+      - transpalette 
+      - forklift
+      - palette
+      - smallcarrier 
+
+#10- stillage
+#11- transpalette
+#5 - forklift
+#7 - palette
+#stillage - smallcarrier
