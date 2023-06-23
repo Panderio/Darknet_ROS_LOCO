@@ -28,18 +28,18 @@ Based on the [LOCO Dataset](https://github.com/tum-fml/loco) 2021 dataset, class
 ### Building
 
     cd catkin_workspace/src
-    git clone --recursive git@gitlab.ubecome.com:vision/darknet_ros_obj_detect.git
+    git clone --recursive git@github.com:Panderio/Darknet_ROS_LOCO.git
     cd ../
 
     catkin_make -DCMAKE_BUILD_TYPE=Release
 
 
 ### Create Folder
-* We need to create a new folder [darknet.zip](/uploads/60c059179d611cf6e4bea611594eefd0/darknet.zip) where the darknet_ros will read these alphabets in which we will copy the same darknet folder and put it in your favorite path for our case it is **"/ubecome/config/detection/darknet"** and make other changes in the "YoloObjectDetector.cpp" in line 17 
+* We need to create a new folder [darknet.zip](/uploads/60c059179d611cf6e4bea611594eefd0/darknet.zip) where the darknet_ros will read these alphabets in which we will copy the same darknet folder and put it in your favorite path for our case it is **"/ /config/detection/darknet"** and make other changes in the "YoloObjectDetector.cpp" in line 17 
 ```
 #ifdef DARKNET_FILE_PATH
 std::string homedir = getenv("HOME");
-std::string configFilePath_ = "/ubecome/config/detection/darknet";
+std::string configFilePath_ = "/ /config/detection/darknet";
 std::string darknetFilePath_ = homedir+configFilePath_;
 ```
 * ```catkin_make```
